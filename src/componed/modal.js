@@ -22,7 +22,7 @@ function Newproduct({card}) {
         namee:namee,
         title:title
     })
-    .then((res)=>console.log(res))
+    .then((res)=>Set.data(res))
   }
 
   return (

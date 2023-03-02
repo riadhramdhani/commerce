@@ -13,17 +13,17 @@ function Example({card}) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const Updateproduct = (id) =>{
-    axios.put("http://192.168.3.202:3333/api/updatepost/:id"+id,{
+    axios.put("http://192.168.3.202:3333/api/updatepost/"+id,{
         imageUrl:imageUrl,
         body:body,
         namee:namee,
         title:title
-    }).then((res)=>console.log(res))
+    }).then((res)=>Set.data(res))
   }
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        addnewproduct
+        Updateproduct
       </Button>
 
       <Modal show={show} onHide={handleClose}>
